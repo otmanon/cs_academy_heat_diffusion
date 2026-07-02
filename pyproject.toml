@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cs-academy-project"
+version = "0.1.0"
+description = "A CS Academy project — replace with your project's description."
+readme = "README.md"
+requires-python = ">=3.9"
+
+# =============================================================================
+# DEPENDENCIES — add your project's runtime dependencies here.
+# To add a new PyPI package, append a line below (optionally pinning a version,
+# e.g. "numpy>=1.24"). Then run `uv sync` to install and update uv.lock.
+# =============================================================================
+dependencies = [
+    "notebook",     # Jupyter notebook (see notebooks/)
+    "numpy",
+]
+
+# =============================================================================
+# OPTIONAL / LOCAL DEPENDENCIES
+# -----------------------------------------------------------------------------
+# The `deps/` directory is meant to hold local, vendored, or editable
+# dependencies (e.g. a library you cloned into the repo). It is currently
+# EMPTY, so nothing there needs installing yet.
+#
+# HOW TO ADD A LOCAL DEPENDENCY FROM deps/:
+#   1. Place the package source in deps/, e.g. deps/mylib/ (must contain its
+#      own pyproject.toml or setup.py).
+#   2. Register it as a path dependency below by uncommenting/editing:
+#
+#        [tool.uv.sources]              # if you use uv
+#        mylib = { path = "deps/mylib", editable = true }
+#
+#      ...and add "mylib" to the `dependencies` list above.
+#
+#   3. OR, without uv, install it directly after installing this project:
+#        pip install -e deps/mylib
+#
+#   4. For a plain (non-packaged) folder of code, you can instead add it to
+#      the package discovery below.
+# =============================================================================
+
+[tool.setuptools]
+# `src/` holds the project modules (your reusable library code).
+packages = ["src"]

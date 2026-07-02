@@ -1,1 +1,25 @@
+# Virtual environments
+.venv/
+venv/
+env/
 
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime config written by polyscope / dear-imgui
+.polyscope.ini
+imgui.ini
+
+# NOTE: uv.lock is intentionally NOT ignored — commit it so everyone
+# installs the exact same dependency versions.
+
+# Rendered output (videos, images, etc.)
+results/
