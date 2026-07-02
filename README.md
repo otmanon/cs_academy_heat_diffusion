@@ -1,12 +1,13 @@
-# CS Academy Project
+# CS Academy: Heat Diffusion
 
-> Replace this section with a short description of your project — what it teaches
-> and what a student will build by the end.
+Pour a cup of hot coffee and it slowly cools. Touch one end of a metal spoon
+sitting in soup and the handle warms up. Heat always spreads from hot places to
+cold ones until everything evens out. In this project you'll teach a computer to
+*simulate* that spreading — the same math weather models, engine designers, and
+special-effects studios use — starting from nothing but a grid of numbers.
 
-This repository is the **default project template** for CS Academy. It defines the
-structure every project should follow. To submit your own project, fork this repo
-(or create a new branch off `main`) and fill in the structure below with your
-lessons, code, notebooks, and data. See [Submitting your project](#submitting-your-project).
+By the end you'll have written a working **heat diffusion simulator** and watched
+a glowing hot spot melt away across a virtual frying pan.
 
 ## Installation
 
@@ -39,30 +40,37 @@ uv sync
 Run this quick test — it imports the core libraries:
 
 ```bash
-uv run python -c "import numpy; print('All dependencies installed correctly!')"
+uv run python -c "import numpy, matplotlib; print('All dependencies installed correctly!')"
 ```
 
 If it prints `All dependencies installed correctly!` with no errors, you're ready to go.
 
+### 4. Launch the notebook
+
+```bash
+uv run jupyter notebook
+```
+
+Then open `notebooks/heat_diffusion.ipynb`.
+
+> **No install? Use Google Colab.** Open `notebooks/heat_diffusion_colab.ipynb`
+> — it runs in your browser with nothing to install. See the notebook's top cell
+> for the "Open in Colab" link.
+
 ## Project Structure
+
+Explanations of the concepts needed can be found in `lessons/`, in order of progression.
+
+Core utility functions (if any) can be found in the `./src/` library.
+
+Actual code students need to fill out can be found in `./notebooks/`.
+
+Additional dependencies needed in the project can be found in `deps/` if needed.
 
 | Directory     | What goes here                                                        |
 | ------------- | -------------------------------------------------------------------- |
-| `lessons/`    | Written explanations of the concepts, in order of progression. Start with `lessons/README.md`. |
-| `src/`        | Core utility functions — your project's reusable library.            |
+| `lessons/`    | Written explanations of the concepts, in order. Start with `lessons/README.md`. |
+| `src/`        | Core utility functions — the project's reusable library.             |
 | `notebooks/`  | Jupyter notebooks where students fill out and run code.              |
-| `data/`       | Datasets and assets (meshes, images, etc.) used by the project.      |
+| `data/`       | Datasets and assets used by the project.                            |
 | `deps/`       | Optional local / vendored dependencies (see `pyproject.toml`).       |
-
-Add your project's dependencies in `pyproject.toml`.
-
-## Submitting your project
-
-1. **Fork** this repository, or create a **new branch** off `main`.
-2. Keep the directory structure above; fill each folder with your own content.
-3. Update this `README.md`, `pyproject.toml`, and `lessons/README.md` to describe
-   your project.
-4. Submit your fork or branch for review.
-
-For a complete worked example, see the `skinning` branch — an "Introduction to
-Skinning" project built on top of this exact template.
